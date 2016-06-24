@@ -1,10 +1,10 @@
-##theme_t3kit_customizer
+##theme_bluemountain_customizer
 
-[![Release](https://img.shields.io/github/tag/t3kit/theme_t3kit_customizer.svg?style=flat-square)](https://github.com/t3kit/theme_t3kit_customizer/tags)
+[![Release](https://img.shields.io/github/tag/t3kit/theme_bluemountain_customizer.svg?style=flat-square)](https://github.com/t3kit/theme_bluemountain_customizer/tags)
 
 Javascript framework for live editing t3kit Theme with color picker (instead of backend forms)
 
-**[t3kit live editing](http://t3kit.github.io/theme_t3kit_customizer)**
+**[t3kit live editing](http://t3kit.github.io/theme_bluemountain_customizer)**
 
 
 ### Required dependencies:
@@ -22,7 +22,7 @@ _Note: You might need to use `sudo` before `npm` command to install packages glo
 
 First, clone repo and update submodules:
 ```bash
-git clone git@github.com:t3kit/theme_t3kit_customizer.git
+git clone git@github.com:t3kit/theme_bluemountain_customizer.git
 git submodule update --init
 ```
 
