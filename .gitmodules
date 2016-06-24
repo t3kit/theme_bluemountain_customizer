@@ -1,0 +1,7 @@
+[submodule "felayout_bluemountain_less"]
+	path = felayout_bluemountain_less
+	url = git@github.com:t3kit/felayout_bluemountain.git
+	branch = less
+[submodule "felayout_bluemountain"]
+	path = felayout_bluemountain
+	url = git@github.com:t3kit/felayout_bluemountain.git
