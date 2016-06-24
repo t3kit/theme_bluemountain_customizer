@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/tag/t3kit/theme_bluemountain_customizer.svg?style=flat-square)](https://github.com/t3kit/theme_bluemountain_customizer/tags)
 
-Javascript framework for live editing t3kit Theme with color picker (instead of backend forms)
+Javascript framework for live editing t3kit Blue Mountain Theme with color picker (instead of backend forms)
 
 **[t3kit live editing](http://t3kit.github.io/theme_bluemountain_customizer)**
 
