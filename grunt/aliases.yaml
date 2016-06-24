@@ -1,0 +1,60 @@
+# ==================================
+# Default, command "grunt".
+# Customizer
+# ==================================
+default:
+    #Dev
+    - 'dev' #task helper
+    #Localhost
+    - 'localhost' #task helper
+    #Watch
+    - 'watch'
+
+# ==================================
+# Alias for Customizer
+# ==================================
+customizer:
+    - 'default'
+
+
+# ==================================
+# Publish Customizer Site
+# ==================================
+pushCustomizer:
+    #Dev
+    - 'dev' #task helper
+    # Push to remote server with creating new branch
+    - 'buildcontrol:customizer'
+    - 'notify:site'
+
+# ==================================
+# Alias for pushCustomizer task
+# ==================================
+pc:
+    - 'pushCustomizer'
+
+
+# ==================================
+# Code linters
+# ==================================
+check:
+    #jscs
+    - 'jscs'
+    #jshint
+    - 'jshint'
+
+
+# ==================================
+# Task helpers  ====================
+# ==================================
+dev:
+    #Dev
+    - 'clean:tempFolder'
+    - 'concurrent:customizer'
+
+localhost:
+    #Localhost
+    - 'connect:localhost'
+    - 'notify:server'
+# ==================================
+# ==================================

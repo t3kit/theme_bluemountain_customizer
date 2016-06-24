@@ -1,0 +1,52 @@
+<div class="customizer js__customizer _hide-customizer">
+
+    <!-- Customizer header [begin] -->
+    <div class="customizer-header">
+        <div class="customizer-header__display">
+            <label class="customizer-header__display-label">Basic
+                <input class="customizer-header__display-val js__display-basic" type="checkbox" checked>
+            </label>
+        </div>
+        <div class="customizer-header__display">
+            <label class="customizer-header__display-label">Advanced
+                <input class="customizer-header__display-val js__display-advanced" type="checkbox" checked>
+            </label>
+        </div>
+        <div class="customizer-header__display">
+            <label class="customizer-header__display-label">Color Livereload
+                <input class="customizer-header__display-val js__color-livereload" type="checkbox">
+            </label>
+        </div>
+    </div>
+    <!-- Customizer header [end] -->
+
+    <!-- Customizer body [begin] -->
+    <div class="customizer-body">
+        {{~>customizerBody~}}
+    </div>
+    <!-- Customizer body [end] -->
+
+
+    <!-- Customizer footer [begin] -->
+    <div class="customizer-footer">
+        <a href="" class="customizer-footer__btn _clear-cache js__customizer-footer__btn-clear-cache" >Clear cache</a>
+        <a href="" class="customizer-footer__btn _typo-conf js__customizer-footer__btn-typo-conf" >Generate TYPO3 Theme config</a>
+    </div>
+    <!-- Customizer footer [end] -->
+
+
+    <!-- Customizer control buttons [begin] -->
+    <div class="js__customizer__hide-btn customizer__hide-btn"></div>
+    <!-- Customizer control buttons [end] -->
+
+</div>
+
+<!-- Customizer modal window [begin] -->
+<div class="js__customizer-modal-overlay customizer-modal-overlay"></div>
+<div class="customizer-modal">
+    <div class="customizer-modal__close-btn js__customizer-modal__close-btn"></div>
+    <h4 class="customizer-modal__header">Add these constants to template record on your t3kit installation</h3>
+    <textarea id="customizer-modal__constants" rows="20" class="customizer-modal__text js__customizer-modal__text" ></textarea>
+    <button class="customizer-modal__clipboard-btn" data-clipboard-target="#customizer-modal__constants">Copy to clipboard</button>
+</div>
+<!-- Customizer modal window [end] -->
