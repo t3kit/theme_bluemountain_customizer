@@ -13,6 +13,7 @@
     transition: all .3s;
     transform: translate3d(0, 0, 0);
     color: #555;
+    font-family: Arial, sans-serif;
 }
 
 // Customizer Header
@@ -486,7 +487,7 @@
     height: 20px;
     width: 20px;
     right: 2px;
-    top: 2px;
+    top: 0;
     cursor: pointer;
     border: 1px solid #aaa;
 }
@@ -569,7 +570,7 @@
 
 .customizer-logo-link {
     width: 100%;
-    height: 26px;
+    height: 28px;
     z-index: 11000;
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -579,7 +580,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    line-height: 24px;
+    line-height: inherit;
     font-size: 11px;
     padding-left: 4px;
     font-weight: 400;
@@ -587,11 +588,11 @@
 .customizer-logo-link__val{
     display: block;
     position: absolute;
-    height: 100%;
+    // height: 100%;
     width: 160px;
     right: 0;
     top: 0;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 300;
     -webkit-appearance: none;
     border: none;
