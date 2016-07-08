@@ -1,6 +1,6 @@
 {
   "name": "theme_bluemountain_customizer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Javascript framework for live editing t3kit Blue Mountain Theme with color picker (instead of backend forms)",
   "license": "MIT",
   "repository": "t3kit/theme_bluemountain_customizer",
