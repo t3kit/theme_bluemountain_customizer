@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+script:
+  - git submodule update --init
+  - npm install bower
+  - npm run bower
+  - npm run gruntDefault
+  - npm run check
+node_js:
+  - v6
+branches:
+  only:
+    - master
