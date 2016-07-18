@@ -1,4 +1,9 @@
 
+#### v0.3.0 `July 18, 2016`
+- **[UPDATE]** felayout_bluemountain 0.5.0 ([066bac8](https://github.com/t3kit/theme_bluemountain_customizer/commit/066bac8))
+
+***
+
 #### v0.2.0 `July 18, 2016`
 - **[UPDATE]** Bower dependencies ([4649708](https://github.com/t3kit/theme_bluemountain_customizer/commit/4649708))
 - **[DOC]** add Travis build status to readme file ([9b172df](https://github.com/t3kit/theme_bluemountain_customizer/commit/9b172df))
