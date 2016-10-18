@@ -104,6 +104,42 @@
             } else{
                 document.documentElement.className += (' ' + (ie + ' ' + 'IE'));
             };
+        
+            var isIOS = false;
+            function detectIOS() {
+                var iDevices = [
+                    'iPad Simulator',
+                    'iPhone Simulator',
+                    'iPod Simulator',
+                    'iPad',
+                    'iPhone',
+                    'iPod'
+                ];
+        
+                if (!!navigator.platform) {
+                    while(iDevices.length) {
+                        if (navigator.platform === iDevices.pop()) {
+                            isIOS = true;
+                            // In case if should be in DOM
+                            // for now can be omitted - no styles by default attached to this class name ' iOS'
+                            document.documentElement.className += " iOS";
+                        }
+                    }
+                }
+            }
+            detectIOS();
+        
+            var isAndroid = false;
+            var android = uA.indexOf('Android ');
+            function detectAndroid() {
+                if (android > 0) {
+                    isAndroid = true;
+                    // In case if should be in DOM
+                    // for now can be omitted - no styles by default attached to this class name ' android'
+                    document.documentElement.className += " android";
+                }
+            }
+            detectAndroid();
         </script>
     
     </head>
@@ -969,16 +1005,21 @@
                     <a class="social-icons__item" href="#"><span class="icons icon-t3-youtube"></span></a>
                 </div>
             </div>
-            <form action="/solr.html" accept-charset="utf-8">
-                <div class="header-middle__search-wrp" >
-                    <div class="header-middle__search-box" >
-                        <input class="header-middle__search-input" data-search="searchSuggest" placeholder="Search..." type="search">
-                        <button class="header-middle__search-submit" type="submit" value="Search"><span class="icons icon-t3-search"></span></button>
-                    </div>
+            <div class="tx-solr">
+                <div class="tx-solr-searchbox">
+                    <form action="/solr.html" accept-charset="utf-8">
+                        <div class="header-middle__search-wrp" >
+                            <div class="header-middle__search-box" >
+                                <input class="header-middle__search-input" data-search="searchSuggest" placeholder="Search..." type="search">
+                                <button class="header-middle__search-submit" type="submit" value="Search"><span class="icons icon-t3-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
     </div>
 </div>
+
 
 
 <nav class="main-navigation js__main-navigation">
@@ -1078,13 +1119,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="icon-text-btn">
+            <div class="icon-text-btn _whole-area-link">
     <h3 class="icon-text-btn__header">
         <span class="icon-text-btn__icon icons icon-pie-chart"></span>
         Content element 1
     </h3>
         <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="icon-text-btn__link " title="READ MORE" href="#">READ MORE</a>
+        <a class="icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
         </div>
@@ -1118,13 +1160,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="icon-text-btn">
+                <div class="icon-text-btn _whole-area-link">
     <h3 class="icon-text-btn__header">
         <span class="icon-text-btn__icon icons icon-pie-chart"></span>
         Content element 1
     </h3>
         <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="icon-text-btn__link btn btn-default " title="READ MORE" href="#">READ MORE</a>
+        <a class="icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
             </div>
@@ -1182,11 +1225,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="img-text-link">
+            <div class="img-text-link _whole-area-link">
             <img class="img-text-link__img img-responsive" src="images/spot_image1.jpg" alt="foto">
         <h3 class="img-text-link__header">Promo Image, text &amp; link</h3>
         <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
         <a class="img-text-link__link btn btn-default " title="Lorem Ipsum Dolor" href="#">Lorem Ipsum Dolor</a>
+        <a class="img-text-link__whole-area-link" title="" href="#background-link">Lorem Ipsum Dolor</a>
 </div>
 
         </div>
@@ -1232,11 +1276,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="big-icon-text-btn">
+            <div class="big-icon-text-btn _whole-area-link">
         <span class="big-icon-text-btn__icon icons icon-laptop-phone"></span>
         <h3 class="big-icon-text-btn__header">Content element 1</h3>
         <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="big-icon-text-btn__link " title="READ MORE" href="#">READ MORE</a>
+        <a class="big-icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
         </div>
@@ -1272,13 +1317,14 @@
         <div class="container mosaic-gray-even">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="icon-text-btn">
+                    <div class="icon-text-btn _whole-area-link">
     <h3 class="icon-text-btn__header">
         <span class="icon-text-btn__icon icons icon-rocket"></span>
         Content element 1
     </h3>
         <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="icon-text-btn__link btn btn-default " title="READ MORE" href="#">READ MORE</a>
+        <a class="icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
                 </div>
@@ -1312,13 +1358,14 @@
         <div class="container mosaic-gray-odd">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="icon-text-btn">
+                    <div class="icon-text-btn _whole-area-link">
     <h3 class="icon-text-btn__header">
         <span class="icon-text-btn__icon icons icon-pie-chart"></span>
         Content element 1
     </h3>
         <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="icon-text-btn__link btn btn-default " title="READ MORE" href="#">READ MORE</a>
+        <a class="icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
                 </div>
@@ -1438,11 +1485,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="big-icon-text-btn">
+                <div class="big-icon-text-btn _whole-area-link">
         <span class="big-icon-text-btn__icon icons icon-tablet"></span>
         <h3 class="big-icon-text-btn__header">Content element 1</h3>
         <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
         <a class="big-icon-text-btn__link " title="READ MORE" href="#">READ MORE</a>
+        <a class="big-icon-text-btn__whole-area-link" title="READ MORE" href="#background-link">READ MORE</a>
 </div>
 
             </div>
@@ -1567,13 +1615,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <div class="img-text-link">
+            <div class="img-text-link _whole-area-link">
             <a class="img-text-link__img-link" title="#" href="#">
                 <img class="img-text-link__img img-responsive" src="images/spot_image1.jpg" alt="foto">
             </a>
         <h3 class="img-text-link__header">Promo Image, text &amp; link</h3>
         <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
         <a class="img-text-link__link " title="Lorem Ipsum Dolor" href="#">Lorem Ipsum Dolor</a>
+        <a class="img-text-link__whole-area-link" title="" href="#background-link">Lorem Ipsum Dolor</a>
 </div>
 
         </div>

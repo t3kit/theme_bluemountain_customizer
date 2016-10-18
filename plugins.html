@@ -104,6 +104,42 @@
             } else{
                 document.documentElement.className += (' ' + (ie + ' ' + 'IE'));
             };
+        
+            var isIOS = false;
+            function detectIOS() {
+                var iDevices = [
+                    'iPad Simulator',
+                    'iPhone Simulator',
+                    'iPod Simulator',
+                    'iPad',
+                    'iPhone',
+                    'iPod'
+                ];
+        
+                if (!!navigator.platform) {
+                    while(iDevices.length) {
+                        if (navigator.platform === iDevices.pop()) {
+                            isIOS = true;
+                            // In case if should be in DOM
+                            // for now can be omitted - no styles by default attached to this class name ' iOS'
+                            document.documentElement.className += " iOS";
+                        }
+                    }
+                }
+            }
+            detectIOS();
+        
+            var isAndroid = false;
+            var android = uA.indexOf('Android ');
+            function detectAndroid() {
+                if (android > 0) {
+                    isAndroid = true;
+                    // In case if should be in DOM
+                    // for now can be omitted - no styles by default attached to this class name ' android'
+                    document.documentElement.className += " android";
+                }
+            }
+            detectAndroid();
         </script>
     
     </head>
@@ -969,16 +1005,21 @@
                     <a class="social-icons__item" href="#"><span class="icons icon-t3-youtube"></span></a>
                 </div>
             </div>
-            <form action="/solr.html" accept-charset="utf-8">
-                <div class="header-middle__search-wrp" >
-                    <div class="header-middle__search-box" >
-                        <input class="header-middle__search-input" data-search="searchSuggest" placeholder="Search..." type="search">
-                        <button class="header-middle__search-submit" type="submit" value="Search"><span class="icons icon-t3-search"></span></button>
-                    </div>
+            <div class="tx-solr">
+                <div class="tx-solr-searchbox">
+                    <form action="/solr.html" accept-charset="utf-8">
+                        <div class="header-middle__search-wrp" >
+                            <div class="header-middle__search-box" >
+                                <input class="header-middle__search-input" data-search="searchSuggest" placeholder="Search..." type="search">
+                                <button class="header-middle__search-submit" type="submit" value="Search"><span class="icons icon-t3-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
     </div>
 </div>
+
 
 
 <nav class="main-navigation js__main-navigation">
