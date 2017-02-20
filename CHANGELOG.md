@@ -1,4 +1,9 @@
 
+#### v1.1.0 `February 20, 2017`
+- **[UPDATE]** [UPDATE] felayout_bluemountain 1.1.0 ([90a9700](https://github.com/t3kit/theme_bluemountain_customizer/commit/90a9700))
+
+***
+
 #### v1.0.0 `January 24, 2017`
 - **[UPDATE]** felayout_bluemountain 1.0.0 ([76b3bc3](https://github.com/t3kit/theme_bluemountain_customizer/commit/76b3bc3))
 
